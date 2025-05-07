@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCharge AI | Smart Energy Optimization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+          tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+          
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-bolt text-primary-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">EcoCharge<span class="text-primary-600">AI</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-primary-600 font-medium">Features</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-primary-600 font-medium">How It Works</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-primary-600 font-medium">Testimonials</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary-600 font-medium">Pricing</a>
+            </div>
+            <button class="md:hidden text-gray-600" id="mobile-menu-button">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <div class="hidden md:block">
+                <a href="#cta" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300 shadow-sm">Get Started</a>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white py-4 px-4" id="mobile-menu">
+            <a href="#features" class="block py-2 text-gray-600 hover:text-primary-600">Features</a>
+            <a href="#how-it-works" class="block py-2 text-gray-600 hover:text-primary-600">How It Works</a>
+            <a href="#testimonials" class="block py-2 text-gray-600 hover:text-primary-600">Testimonials</a>
+            <a href="#pricing" class="block py-2 text-gray-600 hover:text-primary-600">Pricing</a>
+            <a href="#cta" class="block mt-2 bg-primary-600 text-white px-4 py-2 rounded-lg text-center">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                    Smarter Energy.<br>Lower Bills.<br>
+                    <span class="text-primary-600">Zero Effort.</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                    EcoCharge AI learns your energy patterns and automatically optimizes usage to save you money while reducing your carbon footprint.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#cta" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium text-center transition duration-300 shadow-sm">
+                        Start Free Trial
+                    </a>
+                    <a href="#how-it-works" class="border border-gray-300 hover:border-primary-500 text-gray-700 hover:text-primary-600 px-6 py-3 rounded-lg font-medium text-center transition duration-300">
+                        How It Works
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center">
+                    <div class="flex -space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                        <img src="https://randomuser.me/api/portraits/women/63.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-gray-600 text-sm"><span class="font-semibold text-gray-800 happy-customers-count">5,000+</span> happy customers</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="text-gray-600 text-sm ml-1">4.9/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Smart home with energy monitoring" 
+                     class="rounded-xl shadow-lg w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <p class="text-center text-gray-500 mb-8">Trusted by innovative companies worldwide</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <i class="fab fa-google text-3xl text-gray-400 hover:text-gray-600"></i>
+                <i class="fab fa-microsoft text-3xl text-gray-400 hover:text-gray-600"></i>
+                <i class="fab fa-slack text-3xl text-gray-400 hover:text-gray-600"></i>
+                <i class="fab fa-shopify text-3xl text-gray-400 hover:text-gray-600"></i>
+                <i class="fab fa-airbnb text-3xl text-gray-400 hover:text-gray-600"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-100 rounded-full mb-4">FEATURES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">AI-Powered Energy Optimization</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Our intelligent system continuously learns and adapts to your energy usage patterns to maximize savings.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Adaptive Learning</h3>
+                    <p class="text-gray-600">
+                        Our AI studies your energy habits and automatically adjusts settings for optimal efficiency without compromising comfort.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Real-Time Analytics</h3>
+                    <p class="text-gray-600">
+                        Get detailed insights into your energy consumption with actionable recommendations to further reduce waste.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-2xl text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Carbon Footprint Tracking</h3>
+                    <p class="text-gray-600">
+                        Monitor your environmental impact with real-time CO2 savings data and sustainability achievements.
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Smart Automation</h3>
+                    <p class="text-gray-600">
+                        Integrates with all major smart home platforms to control devices based on occupancy, weather, and energy prices.
+                    </p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-2xl text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Peak Demand Management</h3>
+                    <p class="text-gray-600">
+                        Automatically shifts high-energy tasks to off-peak hours to take advantage of lower rates.
+                    </p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Energy Security</h3>
+                    <p class="text-gray-600">
+                        Protects your home from power surges and alerts you to unusual consumption that may indicate equipment issues.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-100 rounded-full mb-4">HOW IT WORKS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Simple Setup, Smart Savings</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Get started in minutes and begin saving immediately with our plug-and-play solution.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Connect Your Devices</h3>
+                    <p class="text-gray-600">
+                        Link your smart meter and compatible devices through our secure app (works with 100+ brands).
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">AI Learns Your Patterns</h3>
+                    <p class="text-gray-600">
+                        Our system analyzes your energy usage for 3-5 days to build your personalized optimization model.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Automatic Savings Begin</h3>
+                    <p class="text-gray-600">
+                        Enjoy reduced bills immediately as EcoCharge AI manages your energy usage 24/7.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16 bg-gray-50 rounded-xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Energy monitoring dashboard" 
+                             class="rounded-lg shadow-md w-full h-auto">
+                    </div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">See Everything at a Glance</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our intuitive dashboard gives you complete visibility into your energy usage, savings, and environmental impact with beautiful, easy-to-understand visualizations.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Real-time energy consumption tracking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Savings projections and actual results</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Device-by-device breakdowns</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Customizable alerts and notifications</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-100 rounded-full mb-4">TESTIMONIALS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Trusted by Thousands of Homes</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it - hear from our satisfied customers.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" class="w-12 h-12 rounded-full mr-4" alt="Sarah J.">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Seattle, WA</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "EcoCharge AI cut our electricity bill by 28% in the first month without us lifting a finger. The system is magical - it knows our routines better than we do!"
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4" alt="Michael T.">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Michael Thompson</h4>
+                            <p class="text-gray-500 text-sm">Austin, TX</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "As an engineer, I'm skeptical of most 'smart' products, but the algorithms behind EcoCharge are legit. We're saving $75/month while reducing our carbon footprint."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-12 h-12 rounded-full mr-4" alt="Priya K.">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Priya Kapoor</h4>
+                            <p class="text-gray-500 text-sm">New York, NY</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "The carbon tracking feature motivated my whole family to be more energy conscious. We've reduced our usage by 35% and the kids love checking our progress."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-100 rounded-full mb-4">PRICING</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Pay for what you need with no hidden fees. Cancel anytime.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden pricing-card">
+                    <div class="p-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Starter</h3>
+                        <p class="text-gray-600 mb-6">For small homes and apartments</p>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-4xl font-bold text-gray-800">$9</span>
+                            <span class="text-gray-500 ml-1">/month</span>
+                        </div>
+                        <a href="#cta" class="block w-full py-3 px-4 text-center font-medium bg-primary-50 text-primary-600 hover:bg-primary-100 rounded-lg transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-200 p-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Up to 10 devices</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Basic energy optimization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Monthly savings reports</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times mr-3"></i>
+                                <span>Peak demand management</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times mr-3"></i>
+                                <span>Carbon footprint tracking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Popular Plan -->
+                <div class="bg-white border-2 border-primary-500 rounded-xl shadow-lg overflow-hidden pricing-card popular">
+                    <div class="bg-primary-500 text-white px-4 py-2 text-center text-sm font-medium">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Pro</h3>
+                        <p class="text-gray-600 mb-6">For most homes and small businesses</p>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-4xl font-bold text-gray-800">$19</span>
+                            <span class="text-gray-500 ml-1">/month</span>
+                        </div>
+                        <a href="#cta" class="block w-full py-3 px-4 text-center font-medium bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-200 p-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Up to 25 devices</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Advanced AI optimization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Weekly savings reports</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Peak demand management</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Carbon footprint tracking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden pricing-card">
+                    <div class="p-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Enterprise</h3>
+                        <p class="text-gray-600 mb-6">For large homes and businesses</p>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-4xl font-bold text-gray-800">$49</span>
+                            <span class="text-gray-500 ml-1">/month</span>
+                        </div>
+                        <a href="#cta" class="block w-full py-3 px-4 text-center font-medium bg-primary-50 text-primary-600 hover:bg-primary-100 rounded-lg transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-200 p-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Unlimited devices</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Premium AI optimization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Daily savings reports</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Advanced peak management</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Detailed carbon analytics</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-3"></i>
+                                <span class="text-gray-700">Priority support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-600">Need a custom solution? <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">Contact our sales team</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div id="savings-calculator" class="bg-white p-6 md:p-8 rounded-xl shadow-md max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Calculate Your Potential Savings</h3>
+                <p class="text-gray-600 mb-6">See how much you could save with EcoCharge AI</p>
+                <div class="space-y-6">
+                    <div>
+                        <label for="current-bill" class="block text-sm font-medium text-gray-700 mb-1">Current Monthly Electric Bill</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">$</span>
+                            <input type="number" id="current-bill" class="pl-8 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500" placeholder="200">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="home-size" class="block text-sm font-medium text-gray-700 mb-1">Home Size (sq ft)</label>
+                        <input type="number" id="home-size" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500" placeholder="1500">
+                    </div>
+                    <div>
+                        <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Location</label>
+                        <select id="location" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500">
+                            <option value="">Select your region</option>
+                            <option value="northeast">Northeast</option>
+                            <option value="south">South</option>
+                            <option value="midwest">Midwest</option>
+                            <option value="west">West</option>
+                        </select>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-gray-600 mb-2">Based on similar homes, you could save:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div class="bg-primary-50 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-primary-600" id="savings-percentage">20%</p>
+                                <p class="text-sm text-gray-600">More efficient</p>
+                            </div>
+                            <div class="bg-primary-50 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-primary-600" id="monthly-savings">$40</p>
+                                <p class="text-sm text-gray-600">Per month</p>
+                            </div>
+                            <div class="bg-primary-50 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-primary-600" id="annual-savings">$480</p>
+                                <p class="text-sm text-gray-600">Per year</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-16 bg-primary-600">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Start Saving Today</h2>
+                <p class="text-lg text-primary-100 mb-8">
+                    Join thousands of happy customers who are saving money and reducing their environmental impact with EcoCharge AI.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="bg-white hover:bg-gray-100 text-primary-600 px-8 py-4 rounded-lg font-medium text-lg shadow-lg transition duration-300">
+                        Start 30-Day Free Trial
+                    </a>
+                    <a href="#" class="border-2 border-white hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-medium text-lg transition duration-300">
+                        Schedule Demo
+                    </a>
+                </div>
+                <p class="text-primary-200 mt-6 text-sm">
+                    No credit card required. Cancel anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-100 rounded-full mb-4">FAQ</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb4">Common Questions</h2>
+                </div>
+                <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm faq-item">
+                <button class="flex justify-between items-center w-full text-left">
+                <h3 class="text-lg font-medium text-gray-800">How much can I expect to save?</h3>
+                <i class="fas fa-chevron-down text-primary-600"></i>
+                </button>
+                <div class="mt-4 text-gray-600">
+                <p>
+                Most customers see savings between 15-35% on their electricity bills. The exact amount depends on your current usage patterns, home size, and devices. Our AI works harder to optimize homes with higher energy consumption.
+                </p>
+                </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm faq-item">
+                <button class="flex justify-between items-center w-full text-left">
+                <h3 class="text-lg font-medium text-gray-800">What smart home systems do you support?</h3>
+                <i class="fas fa-chevron-down text-primary-600"></i>
+                </button>
+                <div class="mt-4 text-gray-600">
+                <p>
+                EcoCharge AI integrates with all major platforms including Google Home, Amazon Alexa, Apple HomeKit, Samsung SmartThings, and most Zigbee/Z-Wave devices. We're constantly adding support for new ecosystems.
+                </p>
+                </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm faq-item">
+                <button class="flex justify-between items-center w-full text-left">
+                <h3 class="text-lg font-medium text-gray-800">Is my data secure?</h3>
+                <i class="fas fa-chevron-down text-primary-600"></i>
+                </button>
+                <div class="mt-4 text-gray-600">
+                <p>
+                Absolutely. We use bank-grade encryption for all data transmission and storage. Your energy data is never sold to third parties. You maintain full control and can delete your data at any time.
+                </p>
+                </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm faq-item">
+                <button class="flex justify-between items-center w-full text-left">
+                <h3 class="text-lg font-medium text-gray-800">What if I'm not satisfied?</h3>
+                <i class="fas fa-chevron-down text-primary-600"></i>
+                </button>
+                <div class="mt-4 text-gray-600">
+                <p>
+                We offer a 30-day money-back guarantee. If you're not completely satisfied with your savings in the first month, we'll refund your subscription fee, no questions asked.
+                </p>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </section>
+
+                    <!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <i class="fas fa-bolt text-primary-400 text-2xl"></i>
+                    <span class="text-xl font-bold text-white">EcoCharge<span class="text-primary-400">AI</span></span>
+                </div>
+                <p class="mb-6">
+                    Making energy optimization effortless through artificial intelligence.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-medium mb-4">Product</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Features</a></li>
+                    <li><a href="#" class="hover:text-white">Pricing</a></li>
+                    <li><a href="#" class="hover:text-white">Integrations</a></li>
+                    <li><a href="#" class="hover:text-white">Updates</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-medium mb-4">Company</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">About</a></li>
+                    <li><a href="#" class="hover:text-white">Careers</a></li>
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                    <li><a href="#" class="hover:text-white">Press</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-medium mb-4">Support</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p>&copy; 2025 EcoCharge AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
