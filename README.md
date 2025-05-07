@@ -24,4 +24,4 @@ EcoCharge AI is a modern, responsive landing page for an AI-powered platform tha
 
 1. Clone the repo:
    ```bash
-   git clone git@github.com:AlfredYohanna/ecochargeai.git
+   git clone https://github.com/AlfredYohanna/ecochargeai.git
